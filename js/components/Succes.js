@@ -14,7 +14,7 @@ export function renderSuccess(container) {
   // "Let's Start" button
   const btn = document.createElement("button");
   btn.className = "success-btn";
-  btn.innerHTML = `Let's Start <img class="success-btn-arrow" src="//arroww.svg" alt="arroww.svg" />`;
+  btn.innerHTML = `Let's Start <img class="success-btn-arrow" src="/public/arroww.svg" alt="arroww.svg" />`;
   btn.onclick = () => {
     window.location.hash = "dashboard";
   };

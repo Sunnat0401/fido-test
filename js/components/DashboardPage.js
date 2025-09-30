@@ -1,14 +1,4 @@
-// Demo data for team, projects, events, activity
-// const DEMO_TEAM = [
-//     { name: "Shawn Stone", role: "UI/UX Designer", status: "Middle", avatar: "https://randomuser.me/api/portraits/men/11.jpg" },
-//     { name: "Randy Delgado", role: "UI/UX Designer", status: "Middle", avatar: "https://randomuser.me/api/portraits/men/12.jpg" },
-//     { name: "Emily Tyler", role: "Copywriter", status: "Junior", avatar: "https://randomuser.me/api/portraits/women/21.jpg" },
-//     { name: "Louis Castro", role: "Copywriter", status: "Middle", avatar: "https://randomuser.me/api/portraits/men/13.jpg" },
-//     { name: "Blake Silva", role: "iOS Developer", status: "Senior", avatar: "https://randomuser.me/api/portraits/men/14.jpg" },
-//     { name: "Joel Phillips", role: "UI/UX Designer", status: "Senior", avatar: "https://randomuser.me/api/portraits/men/15.jpg" },
-//     { name: "Wayne Marsh", role: "Copywriter", status: "Middle", avatar: "https://randomuser.me/api/portraits/men/16.jpg" },
-//     { name: "Oscar Holloway", role: "UI/UX Designer", status: "Middle", avatar: "https://randomuser.me/api/portraits/men/17.jpg" }
-//   ];
+
   // DEMO_TEAM example
 const DEMO_TEAM = [
   {
@@ -111,31 +101,10 @@ const DEMO_TEAM = [
       <h1>Dashboard</h1>
       <span class="main-date calendar-picker" id="calendarRange">
       
-      <img src="/calendar.svg"/>
+      <img src="/public/calendar.svg"/>
       ${currentRange}</span>
     `;
   
-    // Workload section
-    // const workload = document.createElement('section');
-    // workload.className = 'dashboard-workload card';
-    // workload.innerHTML = `
-    //   <div class="section-header">
-    //     <h2>Workload</h2>
-    //     <a href="#" class="section-viewall">View all</a>
-    //   </div>
-    //   <div class="workload-grid">
-    //     ${DEMO_TEAM.map(member => `
-    //       <div class="workload-member card">
-    //         <img src="${member.avatar}" class="workload-avatar" alt="${member.name}" />
-    //         <div class="workload-info">
-    //           <span class="workload-name">${member.name}</span>
-    //           <span class="workload-role">${member.role}</span>
-    //           <span class="workload-status badge badge-${member.status.toLowerCase()}">${member.status}</span>
-    //         </div>
-    //       </div>
-    //     `).join('')}
-    //   </div>
-    // `;
     const workload = document.createElement('section');
     workload.className = 'dashboard-workload';
     workload.innerHTML = `
