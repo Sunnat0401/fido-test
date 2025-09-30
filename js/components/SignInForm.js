@@ -76,9 +76,9 @@ export function renderSignIn(container) {
         required: true,
         placeholder: "youremail@gmail.com",
         tabIndex: 1,
-        className: "woorkroom-auth-main-email-input-singin", 
+        className: "woorkroom-auth-main-email-input-singin",
         style: { color: "", background: "" },
-        width: "", 
+        width: "",
         onInput: (v) => {
           email = v;
         },
@@ -122,7 +122,7 @@ export function renderSignIn(container) {
     );
 
     const optRow = document.createElement("div");
-    optRow.className = "workkroom-sing-in-password"
+    optRow.className = "workkroom-sing-in-password";
     optRow.appendChild(
       Checkbox({
         label: "Remember me",
@@ -152,12 +152,12 @@ export function renderSignIn(container) {
     form.appendChild(
       Button({
         text: "Sign in",
-        className: "workroom-sign-in-buttons" ,
+        className: "workroom-sign-in-buttons",
         variant: "primary",
         tabIndex: 5,
         disabled: !validate(),
         onClick: handleSignIn,
-        icon: "/public/arrow.svg"
+        icon: "/public/arrow.svg",
       })
     );
 
