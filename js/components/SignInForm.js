@@ -51,11 +51,11 @@ export function renderSignIn(container) {
     side.className = "woorkroom-auth-side-auth";
     side.innerHTML = `
         <div class="woorkroom-sing-in-side">
-          <img class="woorkroom-sing-in-side-logo" src="public/logo.jpg" alt="Woorkroom" class="woorkroom-logo">
+          <img class="woorkroom-sing-in-side-logo" src="/public/logo.jpg" alt="Woorkroom" class="woorkroom-logo">
           <span class="woorkroom-brand">Woorkroom</span>
         </div>
         <h2 class="woorkroom-sing-in-side-title">Your place to work<br>Plan. Create. Control.</h2>
-        <img class="woorkroom-sing-in-side-pircture" src="public/sign-in.jpg" alt="Workboard" class="woorkroom-workboard">
+        <img class="woorkroom-sing-in-side-pircture" src="/public/sign-in.jpg" alt="Workboard" class="woorkroom-workboard">
       `;
     const main = document.createElement("div");
     main.className = "woorkroom-auth-main";
@@ -157,7 +157,7 @@ export function renderSignIn(container) {
         tabIndex: 5,
         disabled: !validate(),
         onClick: handleSignIn,
-        icon: "public/arrow.svg"
+        icon: "/public/arrow.svg"
       })
     );
 

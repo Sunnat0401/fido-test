@@ -7,14 +7,14 @@ export function renderSuccess(container) {
   card.className = "success-card";
 
   card.innerHTML = `
-    <img src="public/success.svg" alt="Success" class="success-img">
+    <img src="/public/success.svg" alt="Success" class="success-img">
     <div class="success-title">You are successfully registered!</div>
   `;
 
   // "Let's Start" button
   const btn = document.createElement("button");
   btn.className = "success-btn";
-  btn.innerHTML = `Let's Start <img class="success-btn-arrow" src="public/arroww.svg" alt="arroww.svg" />`;
+  btn.innerHTML = `Let's Start <img class="success-btn-arrow" src="//arroww.svg" alt="arroww.svg" />`;
   btn.onclick = () => {
     window.location.hash = "dashboard";
   };

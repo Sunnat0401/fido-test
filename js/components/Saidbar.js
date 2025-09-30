@@ -4,19 +4,19 @@ export function Sidebar(selected, openSupportModal) {
     sidebar.innerHTML = `
       <div class="sidebar-header">
         <div class="sidebar-logo">
-        <img src="public/logo.jpg" alt="companylogo.svg"/>
+        <img src="/public/logo.jpg" alt="companylogo.svg"/>
         </div>
       </div>
      
       <nav class="sidebar-nav">
         ${[
-          { name: "Dashboard", icon: "public/SaidbarIcon1.svg", hash: "dashboard" },
-          { name: "Projects", icon: "public/SaidbarIcon2.svg", hash: "projects" },
-          { name: "Calendar", icon: "public/SaidbarIcon3.svg", hash: "calendar" },
-          { name: "Vacations", icon: "public/SaidbarIcon4.svg", hash: "vacations" },
-          { name: "Employees", icon: "public/SaidbarIcon5.svg", hash: "employees" },
-          { name: "Messenger", icon: "public/SaidbarIcon6.svg", hash: "messenger" },
-          { name: "Info Portal", icon: "public/SaidbarIcon7.svg", hash: "info-portal" }
+          { name: "Dashboard", icon: "/public/SaidbarIcon1.svg", hash: "dashboard" },
+          { name: "Projects", icon: "/public/SaidbarIcon2.svg", hash: "projects" },
+          { name: "Calendar", icon: "/public/SaidbarIcon3.svg", hash: "calendar" },
+          { name: "Vacations", icon: "/public/SaidbarIcon4.svg", hash: "vacations" },
+          { name: "Employees", icon: "/public/SaidbarIcon5.svg", hash: "employees" },
+          { name: "Messenger", icon: "/public/SaidbarIcon6.svg", hash: "messenger" },
+          { name: "Info Portal", icon: "/public/SaidbarIcon7.svg", hash: "info-portal" }
         ].map(item => `
           <a href="#${item.hash}" class="sidebar-link${selected === item.hash ? ' active' : ''}">
             <img src=${item.icon} alt="sadibar icon"  class="sidebar-icon"/>
