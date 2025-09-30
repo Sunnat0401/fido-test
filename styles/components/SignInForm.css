@@ -1,0 +1,100 @@
+.woorkroom-auth-shell-sign-in {
+  display: flex;
+  width: 1360px;
+  height: 770px;
+  background: #f9fbff;
+}
+.woorkroom-auth-side-auth {
+  width: 590px;
+  height: 770px;
+  display: flex;
+  /* align-items: center; */
+  /* padding: 60px 95px; */
+
+  justify-content: center;
+  flex-direction: column;
+  background: #3f8cff;
+  padding-left: 90px;
+}
+.woorkroom-sing-in-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  color: hsla(0, 0%, 100%, 1);
+}
+.woorkroom-sing-in-side-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: 0px;
+  color: hsla(0, 0%, 100%, 1);
+  cursor: pointer;
+}
+.woorkroom-brand {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+.woorkroom-sing-in-side-logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.woorkroom-sing-in-side-pircture {
+  width: 500px;
+  height: 373px;
+}
+.woorkroom-auth-main {
+  width: 680px;
+  height: 770px;
+  background: hsla(0, 0%, 100%, 1);
+  box-shadow: 0px 6px 58px 0px hsla(216, 19%, 80%, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.woorkroom-auth-main-subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  color: hsla(217, 61%, 10%, 1);
+}
+.woorkroom-auth-main-email-input-singin , .workform-password-input-singin {
+  margin: 0 auto;
+  width: 403px;
+  height: 48px;
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  border: 1px solid hsla(220, 43%, 89%, 1);
+}
+.workkroom-sing-in-password {
+  width: 403px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.workroom-forget-pasword {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  color: hsla(217, 9%, 53%, 1);
+  text-decoration: none;
+}
+.workroom-sign-in-account-link {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: hsla(216, 100%, 62%, 1);
+  text-decoration: none;
+  padding-top: 10px;
+}

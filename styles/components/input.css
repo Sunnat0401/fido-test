@@ -1,0 +1,109 @@
+.workform-input-group {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+.input-label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #222;
+}
+.input-field.woorkroom-auth-main-email-input {
+  width: 403px;
+  height: 28px;
+  border-radius: 14px;
+  border: 1px solid #d8e0f0;
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  /* border:none; */
+  outline: none;
+  padding: 11px 20px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: rgb(81, 81, 81);
+}
+.input-field.woorkroom-auth-main-email-input:focus {
+  border: 1px solid hsla(216, 100%, 62%, 1);
+  box-shadow: 2px hsla(216, 100%, 62%, 1);
+}
+.input-show-password {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: #357cf7;
+}
+.input-field.workform-password-input {
+  width: 403px;
+  height: 28px;
+  opacity: 1;
+  border-radius: 14px;
+  border-width: 1px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  outline: none;
+  padding: 11px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: rgb(81, 81, 81);
+  display: flex;
+  align-items: center;
+}
+.input-field.workform-password-input:focus {
+    border: 1px solid hsla(216, 100%, 62%, 1);
+    box-shadow: 2px hsla(216, 100%, 62%, 1);
+  }
+.input-field.otp-input {
+  border: 2px solid #e3e7ee;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+.input-field.otp-input:focus {
+  border-color: #357cf7;
+  background: #eef5fe;
+}
+.otp-check {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 15px;
+  color: #357cf7;
+  pointer-events: none;
+}
+.workform-input-group {
+  width: 403px;
+  height: 98px;
+}
+.workform-input-group .input-label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: hsla(217, 9%, 53%, 1);
+}
+.input-field .woorkroom-auth-main-email-input {
+  width: 403px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  padding: 11px 18px;
+}
+.input-field .woorkroom-auth-main-email-input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: hsla(217, 9%, 53%, 1);
+}
+.input-field .woorkroom-auth-main-email-input {
+  color: hsla(217, 9%, 53%, 1);
+}

@@ -1,0 +1,15 @@
+.alert {
+    background: #eaf3ff;
+    color: #357cf7;
+    border-radius: 7px;
+    padding: 10px 12px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0 1px 8px rgba(53,124,247,0.06);
+    /* width: 403px; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin: 0 auto;
+}

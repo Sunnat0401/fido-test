@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap");
+
+.woorkroom-sidebar {
+  background: #3f8cff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 260px;
+  height: 740px;
+  border-radius: 24px;
+  padding: 60px 40px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.input-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #357cf7;
+}
+
+.input-field {
+  font-size: 16px;
+  border-radius: 7px;
+  border: 1.5px solid #e3e8ef;
+  padding: 10px 14px;
+  outline: none;
+}
+
+.alert {
+  background: #ffeaea;
+  color: #c72c2c;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.button.primary {
+  background: #357cf7;
+  color: #fff;
+}
+
+.button.prev {
+  background: #e3e8ef;
+  color: #357cf7;
+}
+
+.otp-row {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0 0 0;
+}
+.otp-input {
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1.5px solid #e3e8ef;
+}
+
+/* woorkroom-sidebar */
+.woorkroom-sidebar {
+  width: 346px;
+  height: 860px;
+}
+.workroom-sidebar-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: hsla(0, 0%, 100%, 1);
+  padding: 40px 0px 20px;
+}
+.workroom-logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}

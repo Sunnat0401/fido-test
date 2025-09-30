@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap");
+
+.stepper {
+    /* margin-top: 18px;
+    margin-bottom: 18px; */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.stepper-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.stepper-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+
+
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    /* color: hsla(0, 0%, 100%, 1); */
+    color: #357cf7;
+}
+.stepper-step.completed .stepper-circle {
+    background: #357cf7;
+    color: #fff;
+    border: 2px solid #fff;
+}
+.stepper-step.completed {
+    color: #fff;
+    font-weight: bold;
+}
+.stepper-step.active .stepper-circle {
+    border: 2px solid #fff;
+}
+.stepper-line {
+    width: 2px;
+    height: 22px;
+    background: #fff;
+    margin-left: 10px;
+}

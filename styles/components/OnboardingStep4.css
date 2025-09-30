@@ -1,0 +1,155 @@
+.step4-shell {
+    display: flex;
+    min-height: 100vh;
+    background: #f9fbff;
+  }
+  .step4-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 52px 0 0 0;
+  }
+  .step4-header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .step4-step {
+    color: #357cf7;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+  .step4-title {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #1a2c47;
+    margin-top: 6px;
+    letter-spacing: -0.01em;
+  }
+  .step4-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    max-width: 490px;
+    margin: auto;
+  }
+  .step4-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .step4-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2b3a4a;
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+  }
+  .step4-input-field {
+    height: 48px;
+    border: 1.5px solid #e3e8ef;
+    border-radius: 9px;
+    font-size: 16px;
+    color: #2b3a4a;
+    padding: 0 14px;
+    background: #f6f8fa;
+    font-weight: 500;
+    width: 100%;
+    transition: border 0.15s;
+    outline: none;
+  }
+  .step4-input-field:focus {
+    border-color: #357cf7;
+  }
+  .step4-add-member-link {
+    margin-top: -12px;
+    color: #357cf7;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.14s;
+    display: inline-block;
+  }
+  .step4-add-member-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }
+  .step4-alert-error {
+    background: #ffeaea;
+    color: #c72c2c;
+    border: none;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 7px;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .step4-btn-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 46px;
+    gap: 18px;
+  }
+  .step4-btn {
+    font-size: 16px;
+    min-width: 120px;
+    height: 46px;
+    padding: 0 24px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.16s, color 0.16s, box-shadow 0.16s;
+    box-shadow: 0 2px 8px rgba(50,107,250,0.04);
+    letter-spacing: 0.01em;
+  }
+  .step4-btn-link {
+    background: none;
+    color: #326bfa;
+    border: 1.5px solid #e3e8ef;
+  }
+  .step4-btn-link:hover:not(:disabled) {
+    background: #eaf3ff;
+    color: #326bfa;
+    border-color: #326bfa;
+  }
+  .step4-btn-primary {
+    background: #326bfa;
+    color: #fff;
+    border: 1.5px solid #326bfa;
+    box-shadow: 0 6px 24px 0 rgba(19,30,65,0.10);
+  }
+  .step4-btn-primary:hover:not(:disabled) {
+    background: #1d4ed8;
+    color: #fff;
+  }
+  .step4-btn:disabled,
+  .step4-btn-link:disabled,
+  .step4-btn-primary:disabled {
+    background: #f6f8fa !important;
+    color: #b3b8c5 !important;
+    border-color: #e3e8ef !important;
+    cursor: not-allowed;
+    opacity: 0.68;
+  }
+  @media (max-width: 600px) {
+    .step4-main {
+      padding: 24px 0 0 0;
+    }
+    .step4-form {
+      max-width: 96vw;
+    }
+    .step4-input-field {
+      font-size: 15px;
+      height: 42px;
+    }
+  }

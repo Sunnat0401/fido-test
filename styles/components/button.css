@@ -1,0 +1,48 @@
+.button {
+  padding: 13px 0;
+  width: 100%;
+  font-size: 17px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(53, 124, 247, 0.09);
+  transition: background 0.2s, color 0.2s;
+  margin-top: 7px;
+}
+.button.primary {
+  background: #357cf7;
+  color: #fff;
+}
+.button.primary:disabled {
+  background: #b3c7f6;
+  cursor: not-allowed;
+}
+.button.link {
+  background: none;
+  color: #357cf7;
+  text-decoration: underline;
+  padding: 0;
+  width: auto;
+  box-shadow: none;
+}
+.button.primary.workroom-sign-in-buttons {
+  width: 170px;
+  height: 48px;
+  margin: 0 auto;
+}
+.button.primary.workroom-sign-in-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 40px;
+
+}
+.Workroom-sing-arrow{
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.button.primary.workroom-sign-in-buttons:hover .Workroom-sing-arrow{
+    transform: translateX(10px);
+}

@@ -1,0 +1,352 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap");
+
+.woorkroom-auth-main-step1 {
+  width: 1004px;
+  height: 860px;
+  border-radius: 24px;
+  box-shadow: 0px 6px 58px 0px hsla(216, 19%, 80%, 0.1);
+  background: hsla(0, 0%, 100%, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+.workroom-main-stepper {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsla(216, 100%, 62%, 1);
+  padding-bottom: 6px;
+}
+.workroom-stepper-subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+  color: hsla(217, 61%, 10%, 1);
+  font-family: "Nunito", sans-serif;
+}
+.workroom-text-label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: hsla(217, 9%, 53%, 1);
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.workroom-mobile-number-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+.workroom-mobile-number-select {
+  width: 97px;
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: hsla(217, 9%, 53%, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workroom-mobile-number-group::after {
+  content: "";
+  position: absolute;
+  right: 335px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 3;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="gray" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    no-repeat center center;
+  background-size: 16px 16px;
+}
+.workroom-mobile-input-field {
+  width: 290px;
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  outline: none;
+  padding-left: 14px;
+  color: #434344;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+.workroom-mobile-input-field:focus,
+.workroom-mobile-input-field:focus .workroom-mobile-number-select {
+  border: 1px solid #3F8CFF;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap");
+
+.woorkroom-auth-main-step1 {
+  width: 1004px;
+  height: 860px;
+  border-radius: 24px;
+  box-shadow: 0px 6px 58px 0px hsla(216, 19%, 80%, 0.1);
+  background: hsla(0, 0%, 100%, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+.workroom-main-stepper {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsla(216, 100%, 62%, 1);
+  padding-bottom: 6px;
+}
+.workroom-stepper-subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+  color: hsla(217, 61%, 10%, 1);
+  font-family: "Nunito", sans-serif;
+}
+.workroom-text-label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: hsla(217, 9%, 53%, 1);
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.workroom-mobile-number-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+/* SELECT styles */
+.workroom-mobile-number-select {
+  width: 97px;
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: hsla(217, 9%, 53%, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.2s;
+}
+
+/* INPUT styles */
+.workroom-mobile-input-field {
+  width: 290px;
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+  box-shadow: 0px 1px 2px 0px hsla(216, 40%, 80%, 0.22);
+  outline: none;
+  padding-left: 14px;
+  color: #434344;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  transition: border 0.2s;
+}
+.workroom-mobile-number-select {
+  position: relative;
+  display: inline-block;
+  padding-right: 18px; /* Arrow uchun joy */
+}
+
+/* .workroom-mobile-number-arrow {
+  position: absolute;
+  right: 6px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+} */
+
+/* SVG Arrow */
+.workroom-mobile-number-group {
+  display: flex;
+  align-items: center;
+  position: relative; /* Needed for ::after positioning */
+  gap: 12px; /* Space between the select and input */
+  height: 48px;
+}
+
+/* Fake select styling */
+.workroom-mobile-number-select {
+  display: flex;
+  align-items: center;
+  background: #f6f8fa;
+  border: 1.5px solid #e3e8ef;
+  border-radius: 9px;
+  font-size: 16px;
+  color: #2b3a4a;
+  padding: 0 16px 0 14px;
+  height: 48px;
+  min-width: 64px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: border 0.15s;
+}
+.workroom-mobile-number-select:focus,
+.workroom-mobile-number-select:hover {
+  border-color: #326bfa;
+  outline: none;
+}
+
+/* Arrow icon */
+.workroom-mobile-number-arrow {
+  display: inline-block;
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="gray" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    no-repeat center center;
+  background-size: 16px 16px;
+  vertical-align: middle;
+}
+
+/* Input field */
+.workroom-mobile-input-field {
+  height: 48px;
+  border: 1.5px solid #e3e8ef;
+  border-radius: 9px;
+  font-size: 16px;
+  color: #2b3a4a;
+  padding: 0 14px;
+  background: #f6f8fa;
+  font-weight: 500;
+  width: 290px;
+  transition: border 0.15s;
+}
+.workform-sms-code-and-otp {
+  width: 403px;
+  height: 88px;
+  border-radius: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0px;
+}
+.workform-sms-code-and-otp.otp-input {
+  width: 58px !important;
+  height: 50px !important;
+  border-radius: 14px;
+  border: 1px solid hsla(220, 43%, 89%, 1);
+}
+.register-otp-alert {
+  width: 403px;
+  height: 60px;
+  background: #eaf3ff;
+  color: #357cf7;
+  border: none;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 7px;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+
+  text-align: center;
+}
+.workroom-mobile-input-field:focus {
+  border-color: #326bfa;
+  outline: none;
+}
+
+/* The ::after will be a dropdown arrow next to the select, but we use .workroom-mobile-number-arrow inside the select instead.
+   If you want additional decoration, keep this below, otherwise you can remove it. */
+.workroom-mobile-number-group::after {
+  content: "";
+  position: absolute;
+  right: calc(100% - 60px); /* Adjust as needed for your layout */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 3;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="gray" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    no-repeat center center;
+  background-size: 16px 16px;
+  display: none;
+}
+
+/* FOCUS: input or select */
+.workroom-mobile-input-field:focus,
+.workroom-mobile-number-select:focus {
+  border: 2px solid #3f8cff;
+}
+
+/* CHECKED (valid phone) - add .is-checked to parent for UI feedback */
+.workroom-mobile-number-group.is-checked .workroom-mobile-input-field,
+.workroom-mobile-number-group.is-checked .workroom-mobile-number-select {
+  border: 2px solid #3f8cff;
+}
+
+/* FOCUS: If one is focused, both get blue border (JS bilan qo‘shiladi) */
+.workroom-mobile-number-group.is-focused .workroom-mobile-input-field,
+.workroom-mobile-number-group.is-focused .workroom-mobile-number-select {
+  border: 2px solid #3f8cff;
+}

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;800;900&display=swap");
+input[type="checkbox"].workform-chechkbox {
+
+    appearance: none;
+    background: #fff;
+    border: 2px solid #e0e1e4;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  input[type="checkbox"].workform-chechkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid #357cf7;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .workroom-checkbox-group{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .checkbox-label{
+    color: hsla(217, 9%, 53%, 1);
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    
+  }

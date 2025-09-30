@@ -1,0 +1,47 @@
+/* .woorkroom-auth-shell {
+    display: flex;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    width: 1360px;
+    height: 770px;
+    opacity: 1;
+    top: 20px;
+    left: 40px;
+    
+    overflow: hidden;
+} */
+.woorkroom-auth-side {
+    background: hsla(216, 100%, 62%, 1);
+
+    color: #fff;
+    flex: 1.2;
+    width: 680px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 36px;
+    gap: 36px;
+}
+/* .woorkroom-auth-main {
+    flex: 2;
+    padding: 40px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+@media (max-width: 900px) {
+    /* .woorkroom-auth-shell {
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100vw;
+    } */
+    /* .woorkroom-auth-side, */
+    /* .woorkroom-auth-main {
+        padding: 24px 8vw;
+        min-width: 0;
+    } */
+}
