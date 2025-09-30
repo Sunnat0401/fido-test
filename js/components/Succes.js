@@ -16,7 +16,7 @@ export function renderSuccess(container) {
   btn.className = "success-btn";
   btn.innerHTML = `Let's Start <img class="success-btn-arrow" src="assets/arroww.svg" alt="arroww.svg" />`;
   btn.onclick = () => {
-    window.location.hash = "main";
+    window.location.href = "/dashboard"; // or "/main", or "dashboard.html" depending on your setup
   };
 
   card.appendChild(btn);

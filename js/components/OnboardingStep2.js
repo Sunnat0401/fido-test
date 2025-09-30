@@ -34,7 +34,7 @@ export function renderOnboardingStep2(container) {
   main.style = "flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:52px 0 0 0;";
   main.innerHTML = `<div style="margin-bottom:32px;text-align:center;">
     <div style="color:#357cf7;font-weight:600;font-size:1.1rem;">STEP 2/4</div>
-    <h3 style="margin-top:6px;font-size:1.45rem;font-weight:700;">O‘zingiz haqingizda aytib bering</h3>
+    <h3 style="margin-top:6px;font-size:1.45rem;font-weight:700;">Tell us about yourself</h3>
   </div>`;
 
   const form = document.createElement("form");

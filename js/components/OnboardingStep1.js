@@ -41,10 +41,11 @@ export function renderOnboardingStep1(container) {
       validatePhone(phone) &&
       /\S+@\S+\.\S+/.test(email) &&
       password.length >= 6 &&
-      generatedOtp && otp // otp mavjud bo‘lsa kifoya
+      generatedOtp &&
+      otp // otp mavjud bo‘lsa kifoya
     );
   }
-  
+
   function autoSendSms() {
     generatedOtp = String(Math.floor(1000 + Math.random() * 9000));
     otp = generatedOtp;
@@ -55,8 +56,15 @@ export function renderOnboardingStep1(container) {
       ...state,
       onboarding: {
         ...state.onboarding,
-        phone: { cc, number: phone, otp, otpExpiresAt, generatedOtp, smsSentAt }
-      }
+        phone: {
+          cc,
+          number: phone,
+          otp,
+          otpExpiresAt,
+          generatedOtp,
+          smsSentAt,
+        },
+      },
     });
     updateTimer();
     updateOtpInput();
@@ -67,7 +75,10 @@ export function renderOnboardingStep1(container) {
       let remain = Math.max(0, Math.floor((otpExpiresAt - Date.now()) / 1000));
       const timerEl = document.getElementById("otp-timer");
       if (timerEl) {
-        timerEl.textContent = `${String(Math.floor(remain / 60)).padStart(2, "0")}:${String(remain % 60).padStart(2, "0")}`;
+        timerEl.textContent = `${String(Math.floor(remain / 60)).padStart(
+          2,
+          "0"
+        )}:${String(remain % 60).padStart(2, "0")}`;
       }
       if (remain <= 0) clearInterval(timerIntervalId);
     }, 1000);
@@ -94,8 +105,15 @@ export function renderOnboardingStep1(container) {
       ...state,
       onboarding: {
         ...state.onboarding,
-        phone: { cc, number: phone, otp, otpExpiresAt, generatedOtp, smsSentAt }
-      }
+        phone: {
+          cc,
+          number: phone,
+          otp,
+          otpExpiresAt,
+          generatedOtp,
+          smsSentAt,
+        },
+      },
     });
   }
 
@@ -106,7 +124,14 @@ export function renderOnboardingStep1(container) {
       render();
       return;
     }
-    state.onboarding.phone = { cc, number: phone, otp, otpExpiresAt, generatedOtp, smsSentAt };
+    state.onboarding.phone = {
+      cc,
+      number: phone,
+      otp,
+      otpExpiresAt,
+      generatedOtp,
+      smsSentAt,
+    };
     state.signin = { email, password };
     state.onboarding.step = 2;
     setAuthState(state);
@@ -135,11 +160,12 @@ export function renderOnboardingStep1(container) {
     </div>`;
 
     const form = document.createElement("form");
-    form.style = "display:flex;flex-direction:column;gap:24px;width:100%;max-width:490px;";
+    form.style =
+      "display:flex;flex-direction:column;gap:24px;width:100%;max-width:490px;";
     form.onsubmit = handleNext;
 
     // ===== MOBILE NUMBER GROUP =====
-    const phoneGroup = document.createElement('div');
+    const phoneGroup = document.createElement("div");
     phoneGroup.className = "input-group";
     // Label
     const phoneLabel = document.createElement("label");
@@ -158,14 +184,13 @@ export function renderOnboardingStep1(container) {
     // phoneRow.appendChild(ccSelectFake);
     const phoneRow = document.createElement("div");
     phoneRow.className = "workroom-mobile-number-group";
-    
+
     const ccSelectFake = document.createElement("div");
     ccSelectFake.className = "workroom-mobile-number-select";
     ccSelectFake.innerHTML = `+998 <span class="workroom-mobile-number-arrow"></span>`;
     ccSelectFake.tabIndex = 0; // Fokus bo‘lishi uchun
     phoneRow.appendChild(ccSelectFake);
 
-    
     // Input
     const phoneInput = document.createElement("input");
     phoneInput.className = "workroom-mobile-input-field";
@@ -181,14 +206,12 @@ export function renderOnboardingStep1(container) {
       phoneInput.value = masked;
       phone = masked;
 
-
       if (validatePhone(masked)) {
         phoneRow.classList.add("is-checked");
       } else {
         phoneRow.classList.remove("is-checked");
       }
 
-      
       if (validatePhone(masked)) {
         if (smsTimeoutId) clearTimeout(smsTimeoutId);
         smsTimeoutId = setTimeout(() => {
@@ -206,7 +229,18 @@ export function renderOnboardingStep1(container) {
         otp = "";
         error = "";
         setAuthState({
-          ...state, onboarding: { ...state.onboarding, phone: { cc, number: phone, otp, otpExpiresAt, generatedOtp, smsSentAt } }
+          ...state,
+          onboarding: {
+            ...state.onboarding,
+            phone: {
+              cc,
+              number: phone,
+              otp,
+              otpExpiresAt,
+              generatedOtp,
+              smsSentAt,
+            },
+          },
         });
       }
     });
@@ -235,10 +269,16 @@ export function renderOnboardingStep1(container) {
       inp.addEventListener("input", (e) => {
         let v = e.target.value.replace(/\D/g, "");
         inp.value = v;
-        let arr = Array.from(otpRow.querySelectorAll(".otp-input")).map(t => t.value).join('');
+        let arr = Array.from(otpRow.querySelectorAll(".otp-input"))
+          .map((t) => t.value)
+          .join("");
         otp = arr;
         setAuthState({
-          ...state, onboarding: { ...state.onboarding, phone: { ...state.onboarding.phone, otp } }
+          ...state,
+          onboarding: {
+            ...state.onboarding,
+            phone: { ...state.onboarding.phone, otp },
+          },
         });
         if (otp.length === 4 && generatedOtp && otp !== generatedOtp) {
           error = "Kiritilgan kod noto‘g‘ri!";
@@ -265,8 +305,10 @@ export function renderOnboardingStep1(container) {
       info.className = "register-otp-alert";
       let remain = Math.max(0, Math.floor((otpExpiresAt - Date.now()) / 1000));
       info.innerHTML = `
-        SMS yuborildi <strong>+998 ${phone}</strong>.<br>
-        Kod amal qiladi: <b id="register-otp-timer">${String(Math.floor(remain / 60)).padStart(2, "0")}:${String(remain % 60).padStart(2, "0")}</b>
+        Sent sms <strong>+998 ${phone}</strong>.<br>
+The code is valid.: <b id="register-otp-timer">${String(
+        Math.floor(remain / 60)
+      ).padStart(2, "0")}:${String(remain % 60).padStart(2, "0")}</b>
       `;
       otpRow.appendChild(info);
       updateTimer();
@@ -289,7 +331,9 @@ export function renderOnboardingStep1(container) {
     emailInput.value = email;
     emailInput.required = true;
     emailInput.placeholder = "youremail@gmail.com";
-    emailInput.addEventListener("input", e => { email = e.target.value; });
+    emailInput.addEventListener("input", (e) => {
+      email = e.target.value;
+    });
     emailGroup.appendChild(emailInput);
     form.appendChild(emailGroup);
 
@@ -308,7 +352,9 @@ export function renderOnboardingStep1(container) {
     passInput.value = password;
     passInput.required = true;
     passInput.placeholder = "Password";
-    passInput.addEventListener("input", e => { password = e.target.value; });
+    passInput.addEventListener("input", (e) => {
+      password = e.target.value;
+    });
     passGroup.appendChild(passInput);
     form.appendChild(passGroup);
 
@@ -320,7 +366,14 @@ export function renderOnboardingStep1(container) {
       errDiv.textContent = error;
       form.appendChild(errDiv);
     }
-    form.appendChild(NextPrevButtons({ onPrev: handlePrev, onNext: handleNext, nextDisabled: !validate(), prevDisabled: false }));
+    form.appendChild(
+      NextPrevButtons({
+        onPrev: handlePrev,
+        onNext: handleNext,
+        nextDisabled: !validate(),
+        prevDisabled: false,
+      })
+    );
 
     main.appendChild(form);
     shell.appendChild(main);
