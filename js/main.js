@@ -35,7 +35,7 @@ function router() {
     }
     app.appendChild(Layout(hash, state.user));
   } else {
-    window.location.hash = "dashboard";
+    window.location.hash = "main";
   }
 }
 
