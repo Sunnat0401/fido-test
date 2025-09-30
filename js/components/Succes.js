@@ -11,7 +11,6 @@ export function renderSuccess(container) {
     <div class="success-title">You are successfully registered!</div>
   `;
 
-  // "Let's Start" button
   const btn = document.createElement("button");
   btn.className = "success-btn";
   btn.innerHTML = `Let's Start <img class="success-btn-arrow" src="assets/arroww.svg" alt="arroww.svg" />`;

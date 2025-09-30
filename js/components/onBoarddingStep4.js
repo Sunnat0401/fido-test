@@ -41,7 +41,9 @@ export function renderOnboardingStep4(container) {
       invites.push("");
       render();
       setTimeout(() => {
-        const inputs = document.querySelectorAll('.step4-input-field[type="email"]');
+        const inputs = document.querySelectorAll(
+          '.step4-input-field[type="email"]'
+        );
         if (inputs.length) inputs[inputs.length - 1].focus();
       }, 20);
     }
@@ -51,7 +53,9 @@ export function renderOnboardingStep4(container) {
     const shell = document.createElement("div");
     shell.className = "woorkroom-auth-shell";
 
-    shell.appendChild(SidePanel({ step: 4, totalSteps: 4, title: "Get started" }));
+    shell.appendChild(
+      SidePanel({ step: 4, totalSteps: 4, title: "Get started" })
+    );
 
     const main = document.createElement("div");
     main.className = "woorkroom-auth-main-step1";
@@ -64,7 +68,6 @@ export function renderOnboardingStep4(container) {
     form.className = "step4-form";
     form.onsubmit = handleNext;
 
-    // Email input fields
     invites.forEach((email, idx) => {
       const group = document.createElement("div");
       group.className = "step4-input-group";
@@ -86,13 +89,13 @@ export function renderOnboardingStep4(container) {
       input.tabIndex = 1 + idx;
       input.addEventListener("input", (e) => {
         invites[idx] = e.target.value;
-        nextPrevFooter.querySelector(".step4-btn-primary").disabled = !validate();
+        nextPrevFooter.querySelector(".step4-btn-primary").disabled =
+          !validate();
       });
       group.appendChild(input);
       form.appendChild(group);
     });
 
-    // Add another member button, always visible if less than 3 members
     if (invites.length < 3) {
       const addLink = document.createElement("a");
       addLink.className = "step4-add-member-link";
@@ -102,7 +105,6 @@ export function renderOnboardingStep4(container) {
       form.appendChild(addLink);
     }
 
-    // Error message
     if (error) {
       const errDiv = document.createElement("div");
       errDiv.className = "step4-alert-error";
@@ -110,7 +112,6 @@ export function renderOnboardingStep4(container) {
       form.appendChild(errDiv);
     }
 
-    // Next/Prev buttons (custom, no external component)
     const nextPrevFooter = document.createElement("div");
     nextPrevFooter.className = "step4-btn-footer";
     const prevBtn = document.createElement("button");

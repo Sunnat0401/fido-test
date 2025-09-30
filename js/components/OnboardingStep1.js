@@ -43,7 +43,7 @@ export function renderOnboardingStep1(container) {
       password.length >= 6 &&
       validateOtp(otp) // faqat 4 xonali kod kiritilgan bo‘lsa kifoya
     );
-}
+  }
 
   function autoSendSms() {
     generatedOtp = String(Math.floor(1000 + Math.random() * 9000));
@@ -255,7 +255,6 @@ export function renderOnboardingStep1(container) {
     otpLabel.className = "input-label";
     otpLabel.textContent = "Code from SMS";
     otpGroup.appendChild(otpLabel);
-    // OTP Inputs
     const otpRow = document.createElement("div");
     otpRow.className = "workform-sms-code-and-otp";
     for (let i = 0; i < 4; i++) {
@@ -263,7 +262,6 @@ export function renderOnboardingStep1(container) {
       inp.className = "otp-input";
       inp.type = "text";
       inp.maxLength = 1;
-      // inp.style = "width:42px;height:42px;margin-right:8px;text-align:center;font-size:21px;font-weight:600;border-radius:8px;border:1.5px solid #e3e8ef;";
       inp.value = otp[i] || "";
       inp.addEventListener("input", (e) => {
         let v = e.target.value.replace(/\D/g, "");
@@ -287,18 +285,7 @@ export function renderOnboardingStep1(container) {
       });
       otpRow.appendChild(inp);
     }
-    // if (validatePhone(phone) && generatedOtp && smsSentAt) {
-    //   const info = document.createElement("div");
-    //   info.className = "alert";
-    //   info.style = "background:#eaf3ff;color:#357cf7;border:none;";
-    //   let remain = Math.max(0, Math.floor((otpExpiresAt - Date.now()) / 1000));
-    //   info.innerHTML = `
-    //     SMS yuborildi <strong>+998 ${phone}</strong>.<br>
-    //     Kod amal qiladi: <b id="otp-timer">${String(Math.floor(remain / 60)).padStart(2, "0")}:${String(remain % 60).padStart(2, "0")}</b>
-    //   `;
-    //   otpRow.appendChild(info);
-    //   updateTimer();
-    // }
+
     if (validatePhone(phone) && generatedOtp && smsSentAt) {
       const info = document.createElement("div");
       info.className = "register-otp-alert";
@@ -315,7 +302,6 @@ The code is valid.: <b id="register-otp-timer">${String(
     otpGroup.appendChild(otpRow);
     form.appendChild(otpGroup);
 
-    // ===== Email input =====
     const emailGroup = document.createElement("div");
     emailGroup.className = "input-group";
     const emailLabel = document.createElement("label");
@@ -336,7 +322,6 @@ The code is valid.: <b id="register-otp-timer">${String(
     emailGroup.appendChild(emailInput);
     form.appendChild(emailGroup);
 
-    // ===== Password input =====
     const passGroup = document.createElement("div");
     passGroup.className = "input-group";
     const passLabel = document.createElement("label");
@@ -357,7 +342,6 @@ The code is valid.: <b id="register-otp-timer">${String(
     passGroup.appendChild(passInput);
     form.appendChild(passGroup);
 
-    // ===== Error & Next/Prev buttons =====
     if (error) {
       const errDiv = document.createElement("div");
       errDiv.className = "alert";
@@ -366,16 +350,10 @@ The code is valid.: <b id="register-otp-timer">${String(
       form.appendChild(errDiv);
     }
     form.appendChild(
-      // NextPrevButtons({
-      //   onPrev: handlePrev,
-      //   onNext: handleNext,
-      //   nextDisabled: !validate(),
-      //   prevDisabled: false,
-      // })
       NextPrevButtons({
         onPrev: handlePrev,
         onNext: handleNext,
-        nextDisabled: !validate(), // validate() shart bajarilmasa Next disabled bo'ladi
+        nextDisabled: !validate(),
         prevDisabled: false,
       })
     );

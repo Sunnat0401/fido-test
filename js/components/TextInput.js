@@ -1,41 +1,3 @@
-// export function TextInput({label, type, value, onInput, name, showPassword, onToggleShowPassword, required, placeholder, tabIndex}) {
-//     const group = document.createElement('div');
-//     group.className = 'input-group';
-//     if (label) {
-//         const lbl = document.createElement('label');
-//         lbl.className = 'input-label';
-//         lbl.setAttribute('for', name);
-//         lbl.textContent = label;
-//         group.appendChild(lbl);
-//     }
-//     const input = document.createElement('input');
-//     input.className = 'input-field';
-//     input.type = type === 'password' && showPassword ? 'text' : type;
-//     input.name = name;
-//     input.id = name;
-//     input.value = value;
-//     input.required = !!required;
-//     input.placeholder = placeholder || '';
-//     input.tabIndex = tabIndex || 0;
-//     input.addEventListener('input', e => onInput(e.target.value));
-//     group.appendChild(input);
-//     if (type === 'password') {
-//         const toggleBtn = document.createElement('button');
-//         toggleBtn.className = 'input-show-password';
-//         toggleBtn.type = 'button';
-//         toggleBtn.setAttribute('aria-label', showPassword ? 'Hide password' : 'Show password');
-//         toggleBtn.textContent = showPassword ? '🙈' : '👁';
-//         toggleBtn.onclick = (e) => {
-//             e.preventDefault();
-//             onToggleShowPassword();
-//             input.type = showPassword ? 'text' : 'password';
-//             input.focus();
-//         };
-//         group.appendChild(toggleBtn);
-//     }
-//     return group;
-// }
-
 export function TextInput({
   label,
   type,
@@ -47,10 +9,10 @@ export function TextInput({
   required,
   placeholder,
   tabIndex,
-  className, // <--- yangi parametr!
-  style, // <--- style atributi (string yoki object)
-  width, // <--- width atributi (optional)
-  height, // <--- height atributi (optional)
+  className,
+  style,
+  width,
+  height,
 }) {
   const group = document.createElement("div");
   group.className = "workform-input-group";
@@ -74,7 +36,6 @@ export function TextInput({
   input.tabIndex = tabIndex || 0;
   input.addEventListener("input", (e) => onInput(e.target.value));
 
-  // --- Dinamik style ---
   if (style) {
     if (typeof style === "string") {
       input.style = style;
@@ -82,7 +43,6 @@ export function TextInput({
       Object.assign(input.style, style);
     }
   }
-  // --- Dinamik width/height ---
   if (width)
     input.style.width = typeof width === "number" ? `${width}px` : width;
   if (height)

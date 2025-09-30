@@ -14,16 +14,12 @@ function router() {
   } else if (hash === "onboarding-1") {
     renderOnboardingStep1(app);
   } else if (hash === "onboarding-2") {
-    // <-- To'g'ri!
     renderOnboardingStep2(app);
   } else if (hash === "onboarding-3") {
-    // <-- To'g'ri!
     renderOnboardingStep3(app);
   } else if (hash === "onboarding-4") {
-    // <-- To'g'ri!
     renderOnboardingStep4(app);
-  }
- else if (hash === "success") {
+  } else if (hash === "success") {
     renderSuccess(app);
   } else if (hash === "main") {
     renderMain(app);

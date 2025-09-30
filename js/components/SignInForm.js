@@ -86,20 +86,6 @@ export function renderSignIn(container) {
     );
     form.appendChild(
       TextInput({
-        // label: "Password",
-        // type: "password",
-        // value: password,
-        // name: "password",
-        // required: true,
-        // tabIndex: 2,
-        // showPassword,
-        // onInput: (v) => {
-        //   password = v;
-        // },
-        // onToggleShowPassword: () => {
-        //   showPassword = !showPassword;
-        //   render();
-        // },
         label: "Password",
         type: "password",
         value: password,
@@ -108,8 +94,6 @@ export function renderSignIn(container) {
         placeholder: "Enter your password",
         tabIndex: 2,
         className: "workform-password-input-singin custom-class",
-        // width: ,
-        // height: ,
         showPassword,
         onInput: (v) => {
           password = v;

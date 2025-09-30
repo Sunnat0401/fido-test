@@ -10,12 +10,10 @@ export function Topbar(user) {
        <div class="topbar-user-icon-wrapper">
         <img src="assets/notifications.svg" class="topbar-avatar" alt="${user.name}" />
        </div>
-     
            <div  class="topbar-user-settings">
- <img src="assets/photo.svg" class="topbar-avatar" alt="${user.name}" />
- <span> Evan YAtes</span>
- <img src="assets/right.svg" class="topbar-arrow" alt="${user.name}" />
-
+             <img src="assets/photo.svg" class="topbar-avatar" alt="${user.name}" />
+             <span> Evan YAtes</span>
+            <img src="assets/right.svg" class="topbar-arrow" alt="${user.name}" />
            </div>
 
      
@@ -23,8 +21,4 @@ export function Topbar(user) {
     </div>
   `;
   return topbar;
-}
-
-{
-  /* <span class="topbar-user-icon">⚙️</span>   <span class="topbar-username">${user.name}</span> */
 }

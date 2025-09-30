@@ -1,5 +1,3 @@
-
-
 export function NextPrevButtons({
     onPrev,
     onNext,
@@ -11,7 +9,6 @@ export function NextPrevButtons({
 }) {
     const wrapper = document.createElement("div");
     wrapper.className = "npb-wrapper";
-    // Do not use inline style, all layout handled by .npb-wrapper CSS
 
     const prevBtn = document.createElement('button');
     prevBtn.className = 'npb-btn npb-link';

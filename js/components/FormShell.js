@@ -26,7 +26,6 @@ export function renderSignIn(container) {
         state.signin.password = rememberMe ? password : '';
         state.rememberMe = rememberMe;
         setAuthState(state);
-        // Onboarding yoki Success
         window.location.hash = 'onboarding';
     }
     function render() {
@@ -64,7 +63,6 @@ export function renderSignIn(container) {
             onChange: v => { rememberMe = v; }
         }));
 
-        // Forgot password link
         const forgot = document.createElement('a');
         forgot.className = 'button link';
         forgot.href = '#forgot';

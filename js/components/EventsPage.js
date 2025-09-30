@@ -1,4 +1,3 @@
-// Demo event list (asosiy voqealar ro‘yxati)
 const EVENTS_LIST = [
     {
       title: "Presentation of the new department",
@@ -66,10 +65,9 @@ const EVENTS_LIST = [
     }
   ];
   
-  // EventsPage funksiyasi DOM Node qaytaradi!
   export function EventsPage(user) {
     const main = document.createElement('main');
-    main.className = 'main-content';
+    main.className = 'event-main-content';
     main.innerHTML = `
       <div class="main-header">
         <a href="#dashboard" class="back-link">&lt; Back to Dashboard</a>
@@ -96,12 +94,9 @@ const EVENTS_LIST = [
     });
     main.appendChild(grid);
   
-    // Modal ochish uchun (add event) event qo'yish
     setTimeout(() => {
       const btn = main.querySelector('#addEventBtn');
       if (btn) btn.onclick = () => {
-        // add event modal ochish uchun funksiya chaqiring
-        // misol uchun: openAddEventModal();
         alert("Add event modal ochiladi (demo)");
       };
     }, 0);
