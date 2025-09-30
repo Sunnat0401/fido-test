@@ -366,10 +366,16 @@ The code is valid.: <b id="register-otp-timer">${String(
       form.appendChild(errDiv);
     }
     form.appendChild(
+      // NextPrevButtons({
+      //   onPrev: handlePrev,
+      //   onNext: handleNext,
+      //   nextDisabled: !validate(),
+      //   prevDisabled: false,
+      // })
       NextPrevButtons({
         onPrev: handlePrev,
         onNext: handleNext,
-        nextDisabled: !validate(),
+        nextDisabled: !validate(), // validate() shart bajarilmasa Next disabled bo'ladi
         prevDisabled: false,
       })
     );
