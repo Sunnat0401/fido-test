@@ -99,8 +99,8 @@ export function TextInput({
       showPassword ? "Hide password" : "Show password"
     );
     toggleBtn.innerHTML = showPassword
-      ? '<img src="assets/eyye.svg" alt="Ko\'z ochiq" width="24" height="24">'
-      : '<img src="assets/eyye.svg" alt="Ko\'z yopiq" width="24" height="24">';
+      ? '<img src="/eyye.svg" alt="Ko\'z ochiq" width="24" height="24">'
+      : '<img src="public/eyye.svg" alt="Ko\'z yopiq" width="24" height="24">';
     toggleBtn.onclick = (e) => {
       e.preventDefault();
       onToggleShowPassword();

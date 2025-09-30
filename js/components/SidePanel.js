@@ -11,7 +11,7 @@ export function SidePanel({
   side.innerHTML = `
     ${
       showLogo
-        ? `<img class="workroom-logo" src="assets/logo.jpg" alt="Woorkroom" >`
+        ? `<img class="workroom-logo" src="public/logo.jpg" alt="Woorkroom" >`
         : ""
     }
     <h2 class="workroom-sidebar-title">${title}</h2>

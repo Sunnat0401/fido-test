@@ -111,7 +111,7 @@ const DEMO_TEAM = [
       <h1>Dashboard</h1>
       <span class="main-date calendar-picker" id="calendarRange">
       
-      <img src="assets/calendar.svg"/>
+      <img src="/calendar.svg"/>
       ${currentRange}</span>
     `;
   
