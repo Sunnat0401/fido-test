@@ -41,10 +41,9 @@ export function renderOnboardingStep1(container) {
       validatePhone(phone) &&
       /\S+@\S+\.\S+/.test(email) &&
       password.length >= 6 &&
-      generatedOtp &&
-      otp // otp mavjud bo‘lsa kifoya
+      validateOtp(otp) // faqat 4 xonali kod kiritilgan bo‘lsa kifoya
     );
-  }
+}
 
   function autoSendSms() {
     generatedOtp = String(Math.floor(1000 + Math.random() * 9000));
