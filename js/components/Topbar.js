@@ -8,13 +8,13 @@ export function Topbar(user) {
     <div class="topbar-right">
       <span class="topbar-user">
        <div class="topbar-user-icon-wrapper">
-        <img src="/public/notifications.svg" class="topbar-avatar" alt="${user.name}" />
+        <img src="assets/notifications.svg" class="topbar-avatar" alt="${user.name}" />
        </div>
      
            <div  class="topbar-user-settings">
- <img src="/public/photo.svg" class="topbar-avatar" alt="${user.name}" />
+ <img src="assets/photo.svg" class="topbar-avatar" alt="${user.name}" />
  <span> Evan YAtes</span>
- <img src="/public/right.svg" class="topbar-arrow" alt="${user.name}" />
+ <img src="assets/right.svg" class="topbar-arrow" alt="${user.name}" />
 
            </div>
 
