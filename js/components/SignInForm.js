@@ -33,7 +33,7 @@ export function renderSignIn(container) {
     if (isSignedUp(email, password)) {
       window.location.hash = "main";
     } else {
-      error = "Bunday foydalanuvchi ro‘yxatdan o‘tmagan!";
+      error = "This user is not registered!";
       render();
     }
   }

@@ -39,13 +39,12 @@ export function renderOnboardingStep1(container) {
   function validate() {
     return (
       validatePhone(phone) &&
-      validateOtp(otp) &&
-      generatedOtp &&
-      otp === generatedOtp &&
       /\S+@\S+\.\S+/.test(email) &&
-      password.length >= 6
+      password.length >= 6 &&
+      generatedOtp && otp // otp mavjud bo‘lsa kifoya
     );
   }
+  
   function autoSendSms() {
     generatedOtp = String(Math.floor(1000 + Math.random() * 9000));
     otp = generatedOtp;
