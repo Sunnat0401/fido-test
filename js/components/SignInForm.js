@@ -31,7 +31,7 @@ export function renderSignIn(container) {
       return;
     }
     if (isSignedUp(email, password)) {
-      window.location.hash = "main";
+      window.location.hash = "dashboard";
     } else {
       error = "This user is not registered!";
       render();
